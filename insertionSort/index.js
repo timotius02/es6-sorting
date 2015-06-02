@@ -5,7 +5,7 @@ const defaultCompare = function(a, b) {
 }
 
 /**
- * Bubble sort with O(n^2) time complexity
+ * InsertionSort with O(n^2) time complexity
  * @param  {Array} array           Array to be sorted
  * @param  {Function} compare 	   Compare function
  * @return {Array}                 Sorted Array
