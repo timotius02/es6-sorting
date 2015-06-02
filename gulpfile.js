@@ -5,7 +5,7 @@ var babelify = require('babelify');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 
-gulp.task('selection', function() {
+gulp.task('selectionSort', function() {
     browserify({
     entries: './selectionSort/test.js',
     debug: true
@@ -17,7 +17,7 @@ gulp.task('selection', function() {
     .pipe(shell('node ./selectionSort/output.js'));
 });
 
-gulp.task('bubble', function() {
+gulp.task('bubbleSort', function() {
     browserify({
     entries: './bubbleSort/test.js',
     debug: true
