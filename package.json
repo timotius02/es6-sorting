@@ -1,0 +1,26 @@
+{
+  "name": "es6-sort",
+  "version": "1.0.0",
+  "description": "Sorting Algorithms using ES6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timotius02/es6-sorts.git"
+  },
+  "author": "Timotius Sitorus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timotius02/es6-sorts/issues"
+  },
+  "homepage": "https://github.com/timotius02/es6-sorts#readme",
+  "devDependencies": {
+    "babelify": "^6.1.2",
+    "browserify": "^10.2.3",
+    "gulp": "^3.9.0",
+    "gulp-shell": "^0.4.1",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
