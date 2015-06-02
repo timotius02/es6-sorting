@@ -6,11 +6,12 @@ const defaultCompare = function(a, b) {
 
 /**
  * SelectionSort with O(n^2) time complexity
- * @param  {Array} array           Array to be sorted
+ * @param  {Array} arr             Array to be sorted
  * @param  {Function} compare 	   Compare function
  * @return {Array}                 Sorted Array
  */
-export default function(array, compare = defaultCompare) {
+export default function(arr, compare = defaultCompare) {
+	let array = arr.slice();
 	let min = 0;
 	let index = 0;
 	let temp = 0;
@@ -30,4 +31,5 @@ export default function(array, compare = defaultCompare) {
 		array[i] = min;
 		array[index] = temp;
 	}
+	return array;
 }

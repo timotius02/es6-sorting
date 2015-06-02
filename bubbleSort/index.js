@@ -6,11 +6,12 @@ const defaultCompare = function(a, b) {
 
 /**
  * Bubble sort with O(n^2) time complexity
- * @param  {Array} array           Array to be sorted
+ * @param  {Array} arr           Array to be sorted
  * @param  {Function} compare 	   Compare function
  * @return {Array}                 Sorted Array
  */
-export default function(array, compare = defaultCompare) {
+export default function(arr, compare = defaultCompare) {
+	let array = arr.slice();
 	let temp = 0;
 	for (let i = array.length - 1; i > 0; i--) {
 		for(let j = 0; j < i; j++) {
@@ -21,4 +22,5 @@ export default function(array, compare = defaultCompare) {
 			}
 		}
 	}
+	return array;
 }

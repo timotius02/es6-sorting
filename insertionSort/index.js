@@ -6,11 +6,12 @@ const defaultCompare = function(a, b) {
 
 /**
  * InsertionSort with O(n^2) time complexity
- * @param  {Array} array           Array to be sorted
+ * @param  {Array} arr             Array to be sorted
  * @param  {Function} compare 	   Compare function
  * @return {Array}                 Sorted Array
  */
-export default function(array, compare = defaultCompare) {
+export default function(arr, compare = defaultCompare) {
+	let array = arr.slice();
 	for (let i = 1, length = array.length; i < length; i++) {
 		let temp = 0;
 		for (let j = i; j > 0; j--) {
@@ -21,4 +22,5 @@ export default function(array, compare = defaultCompare) {
 			}
 		}
 	}
+	return array;
 }

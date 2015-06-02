@@ -18,5 +18,5 @@ const randomArray = function(size=100, range=100) {
 }
 
 let testSubject = randomArray();
-bubbleSort(testSubject);
-console.log(testSubject);
+let result = bubbleSort(testSubject);
+console.log(result);
