@@ -1,6 +1,6 @@
 'use strict';
 
-const selectionSort = require('./index');
+const bubbleSort = require('./index');
 
 /**
  * Creates a random array 
@@ -18,5 +18,5 @@ const randomArray = function(size=100, range=100) {
 }
 
 let testSubject = randomArray();
-selectionSort(testSubject);
+bubbleSort(testSubject);
 console.log(testSubject);

@@ -5,7 +5,7 @@ var babelify = require('babelify');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 
-var sort = ['selectionSort', 'bubbleSort', 'selectionSort'];
+var sort = ['selectionSort', 'bubbleSort', 'insertionSort'];
 
 sort.map(function( sortName ) {
     gulp.task(sortName, function() {
