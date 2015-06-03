@@ -4,7 +4,9 @@
   "description": "Sorting Algorithms using ES6",
   "main": "index.js",
   "browserify": {
-    "transform": [ "babelify" ]
+    "transform": [
+      "babelify"
+    ]
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,9 +23,10 @@
   "homepage": "https://github.com/timotius02/es6-sorts#readme",
   "devDependencies": {
     "babelify": "^6.1.2",
+    "bluebird": "^2.9.27",
     "browserify": "^10.2.3",
     "gulp": "^3.9.0",
-    "gulp-shell": "^0.4.1",
+    "gulp-mocha": "^2.1.0",
     "vinyl-source-stream": "^1.1.0"
   }
 }

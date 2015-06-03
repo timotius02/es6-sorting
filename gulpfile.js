@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var shell = require('gulp-shell');
+var mocha = require('gulp-mocha')
 
 var babelify = require('babelify');
 var browserify = require('browserify');
@@ -17,6 +17,10 @@ sort.map(function( sortName ) {
             .bundle()
             .pipe(source('output.js'))
             .pipe(gulp.dest('./'+ sortName +''))
-            .pipe(shell('node ./'+ sortName +'/output.js'));
+            .pipe(mocha({reporter: 'spec'}));
     });
+});
+
+gulp.task('test', function() {
+
 });

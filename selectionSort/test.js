@@ -1,6 +1,11 @@
 'use strict';
 
 const selectionSort = require('./index');
+const assert = require("assert");
+
+const compare = function(a, b) {
+	return a - b;
+}
 
 /**
  * Creates a random array 
@@ -17,6 +22,23 @@ const randomArray = function(size=100, range=100) {
 	return result;
 }
 
-let testSubject = randomArray();
-let result = selectionSort(testSubject);
-console.log(result);
+describe('SelectionSort', function(){
+	it('Should sort the same as default sort', function(){
+	  let test = randomArray();
+	  let result = selectionSort(test);
+	  assert.deepEqual(test.sort(compare), result);
+	})
+	it('Should sort empty arrays correctly', function(){
+		let test = [];
+		let result = selectionSort(test);
+		assert.deepEqual(test.sort(compare), result);
+	});
+	it('Should sort non-integer arrays correctly', function(){
+		let test = ['abcdefg', 'abcdef', 'abcde', 'abcd', 'abc', 'ab', 'a', 'abcdefg'];
+		let compareFunc = function(a, b) {
+			return b.length - a.length;
+		}
+		let result = selectionSort(test, compareFunc);
+		assert.deepEqual(test.sort(compareFunc), result);
+	});
+})

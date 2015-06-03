@@ -14,7 +14,7 @@ const merge = function(left, right, compare) {
 	let list = [];
 
 	while (left.length > 0 && right.length > 0) {
-		if (compare(left[0], right[0]) <= 0) {
+		if (compare(right[0], left[0]) > 0) {
 			list.push(left.shift());
 		}
 		else {
@@ -43,12 +43,12 @@ const mergeSort = function(array, compare = defaultCompare) {
 	if(array.length <= 1)
 		return array;
 
-	let split = array.length / 2;
+	let split = Math.floor(array.length / 2);
 	let left = array.slice(0, split);
 	let right = array.slice(split);
 
-	left = mergeSort(left);
-	right = mergeSort(right);
+	left = mergeSort(left, compare);
+	right = mergeSort(right, compare);
 
 	return merge(left, right, compare);
 }

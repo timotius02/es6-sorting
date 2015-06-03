@@ -4,13 +4,18 @@ const defaultCompare = function(a, b) {
 	return a - b;
 }
 
+const quickSort = function(array, compare = defaultCompare) {
+	const copy = array.slice();
+	return quickSortHelper(copy, compare);
+} 
+
 /**
  * QuickSort with O(n log n) time complexity
  * @param  {Array} array           Array to be sorted
  * @param  {Function} compare 	   Compare function
  * @return {Array}                 Sorted Array
  */
-const quickSort = function(array, compare = defaultCompare) {
+const quickSortHelper = function(array, compare) {
 	if (array.length <= 1) 
 		return array;
 
