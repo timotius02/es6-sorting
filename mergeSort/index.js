@@ -14,17 +14,21 @@ const merge = function(left, right, compare) {
 	let list = [];
 
 	while (left.length > 0 && right.length > 0) {
-		if (compare(left[0], right[0]) <= 0)
+		if (compare(left[0], right[0]) <= 0) {
 			list.push(left.shift());
-		else
+		}
+		else {
 			list.push(right.shift());
+		}
 	}
 
-	while (left.length > 0)
+	while (left.length > 0) {
 		list.push(left.shift());
+	}
 
-	while (right.length > 0)
+	while (right.length > 0) {
 		list.push(right.shift());
+	}
 
 	return list;
 }
@@ -36,7 +40,7 @@ const merge = function(left, right, compare) {
  * @return {Array}                 Sorted Array
  */
 const mergeSort = function(array, compare = defaultCompare) {
-	if(array.length == 1)
+	if(array.length <= 1)
 		return array;
 
 	let split = array.length / 2;
