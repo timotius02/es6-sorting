@@ -7,7 +7,7 @@ const defaultCompare = function(a, b) {
 /**
  * heapSort initial function. Helps preserve immutability
  * @param  {Array} array   The unsorted array
- * @param  {function} compare [description]
+ * @param  {function} compare The function to sort the array by
  * @return {Array}         The sorted array result
  */
 const heapSort = function(array, compare = defaultCompare) {
@@ -15,11 +15,25 @@ const heapSort = function(array, compare = defaultCompare) {
 	return heapSortHelper(copy, compare);
 } 
 
+/**
+ * Swaps two elements in an aray
+ * @param  {array} array  The containing array
+ * @param  {int} index1   The index of the first element
+ * @param  {int} index2   The index of the second element
+ */
 const swap = function(array, index1, index2) {
 	let temp = array[index1];
 	array[index1] = array[index2];
 	array[index2] = temp;
 }
+
+/**
+ * Adds the element at index to the heap
+ * @param {[type]} array   The containing array for the heap
+ * @param {[type]} start   The start index of the heap
+ * @param {[type]} index   The end index where the element is originally added
+ * @param {[type]} compare The function that the elements are compared by 
+ */
 const addHeap = function(array, start, index, compare) {
 	while (index > start) {
 		let parentIndex = Math.floor((index - 1) / 2);
@@ -36,10 +50,9 @@ const addHeap = function(array, start, index, compare) {
 /**
  * Removes the max value of the heap and sorts the remaining
  * @param  {array} array   The containing array for the heap
- * @param  {[type]} start   [description]
- * @param  {[type]} end     [description]
- * @param  {[type]} compare [description]
- * @return {[type]}         [description]
+ * @param  {int} start     Index of the start of section of the heap 
+ * @param  {int} end       Index of the end of section of the heap
+ * @param  {function} compare The function to sort the array by
  */
 const sortHeap = function(array, start, end, compare) {
 	swap(array, start, end);
