@@ -6,7 +6,7 @@ var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var Promise = require('bluebird');
 
-var sort = ['selectionSort', 'bubbleSort', 'insertionSort', 'mergeSort', 'quickSort', 'heapSort'];
+var sort = ['selectionSort', 'bubbleSort', 'insertionSort', 'mergeSort', 'quickSort', 'heapSort', 'countingSort'];
 
 gulp.task('test', function() {
     Promise.map(sort, function(sortName) {
