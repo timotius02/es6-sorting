@@ -16,3 +16,8 @@ Gulp is used to compile the ES6 code via Babel as well as to run tests. To run s
 $ gulp <% sortName %>
 ```
 
+To run all tests consecutively:
+
+```sh
+$ gulp test
+```
